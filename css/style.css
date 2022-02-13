@@ -1,0 +1,341 @@
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 0.2s ease-in-out forwards;
+          animation: fade-in 0.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 0.2s ease-in-out forwards;
+          animation: fade-out 0.2s ease-in-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: black;
+  line-height: 1.5;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+a,
+a:visited,
+a:hover {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button .button-basic {
+  font-size: 1rem;
+  text-align: center;
+  padding: 3rem 1.875rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header {
+  background-color: white;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header.open .header__hamburger > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .header__hamburger > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__hamburger > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+
+.header .header__topnav {
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+@media (max-width: 39.9375em) {
+  .header .header__topnav {
+    display: block;
+    background-color: white;
+  }
+}
+
+.header .header__hamburger > span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.header .header__hamburger > span:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 39.9375em) {
+  .header .header__hamburger {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+  }
+}
+
+.header .header__searchbox {
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #c7c7c7;
+}
+
+@media (max-width: 39.9375em) {
+  .header .header__searchbox {
+    width: 100%;
+    margin: 0.5rem auto;
+  }
+}
+
+.header .header__searchbox .fas {
+  font-size: 1rem;
+  color: #919191;
+  padding: 0 0.5rem;
+}
+
+.header .header__searchbox input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 2.5rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.header .header__cta1, .header .header__cta2 {
+  padding: 0.5rem 1rem;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  font-weight: 400;
+  color: black;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.header .header__cta1:hover, .header .header__cta2:hover {
+  color: #5e5e5e;
+}
+
+.header .header__cta2 {
+  background-color: #00b3ff;
+  border: 1px solid #00b3ff;
+  margin-left: 1rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.header .header__cta2:hover {
+  color: white;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
+}
+
+.header nav {
+  padding: 1rem 4rem;
+  position: relative;
+}
+
+.header nav a {
+  position: relative;
+  font-size: 1.125rem;
+  color: black;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.header nav a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  border-radius: 10px;
+  background-color: #00b3ff;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.header nav a:hover {
+  color: #5e5e5e;
+}
+
+.header nav a.active::before {
+  opacity: 1;
+}
+
+.header .header__menu {
+  position: absolute;
+  width: calc(100% - 2rem);
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: white;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.header .header__menu a {
+  display: block;
+  color: black;
+  padding: 0.5rem;
+}
+
+.header .header__cta {
+  text-align: center;
+}
+
+.header .header__cta .header__cta1, .header .header__cta .header__cta2 {
+  margin: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
