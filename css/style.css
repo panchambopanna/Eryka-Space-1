@@ -184,7 +184,7 @@ button .button-basic {
 
 .header .header__topnav {
   position: relative;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2%;
   border-bottom: 1px solid #c7c7c7;
 }
 
@@ -213,7 +213,7 @@ button .button-basic {
 @media (max-width: 39.9375em) {
   .header .header__hamburger {
     position: absolute;
-    top: 1.5rem;
+    top: 20%;
     right: 2rem;
   }
 }
@@ -227,7 +227,7 @@ button .button-basic {
 @media (max-width: 39.9375em) {
   .header .header__searchbox {
     width: 100%;
-    margin: 0.5rem auto;
+    margin: 0.2rem auto;
   }
 }
 
@@ -277,7 +277,7 @@ button .button-basic {
 }
 
 .header nav {
-  padding: 1rem 4rem;
+  padding: 1rem 2%;
   position: relative;
 }
 

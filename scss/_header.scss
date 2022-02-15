@@ -34,7 +34,7 @@
   // primary navigation bar
   #{&}__topnav {
     position: relative;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2%;
     border-bottom: 1px solid $gray100;
 
     @include breakpoint-down(small) {
@@ -59,7 +59,7 @@
     }
     @include breakpoint-down(small) {
       position: absolute;
-      top: 1.5rem;
+      top: 20%;
       right: 2rem;
     }
   }
@@ -71,7 +71,7 @@
     border: 1px solid $gray100;
     @include breakpoint-down(small) {
       width: 100%;
-      margin: 0.5rem auto;
+      margin: 0.2rem auto;
     }
 
     .fas {
@@ -113,7 +113,7 @@
   }
   // secondary navigation links
   nav {
-    padding: 1rem 4rem;
+    padding: 1rem 2%;
     position: relative;
     a {
       position: relative;
