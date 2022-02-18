@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="images/png" href="/images/favicon.png" />
+    <link rel="icon" type="images/png" href="/images/fav.png" />
     <!-- Google fonts link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,7 +54,7 @@
         <!-- container for cta buttons -->
         <div class="hide-for-mobile">
           <a href="#" class="header__cta1" id="logbtn">Log In</a>
-          <a href="#" class="header__cta2">Sign Up</a>
+          <a href="#" class="header__cta2" id="signbtn"> Sign Up</a>
         </div>
       </div>
 
@@ -89,36 +89,28 @@
       </div>
     </header>
     <!-- Navigation section ends -->
-    <h1>Hi</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Libero id faucibus
-      nisl tincidunt eget nullam non nisi est. Egestas dui id ornare arcu odio
-      ut sem nulla pharetra. Lorem dolor sed viverra ipsum nunc aliquet
-      bibendum. Adipiscing vitae proin sagittis nisl rhoncus. Cursus euismod
-      quis viverra nibh cras. Dictum at tempor commodo ullamcorper. Habitasse
-      platea dictumst vestibulum rhoncus est pellentesque elit. Justo nec
-      ultrices dui sapien eget mi proin sed libero. Enim ut sem viverra aliquet
-      eget. Ut etiam sit amet nisl purus in mollis. Eget duis at tellus at urna
-      condimentum mattis. Amet porttitor eget dolor morbi non arcu risus quis
-      varius. Dictum non consectetur a erat. Est ante in nibh mauris. Sed risus
-      pretium quam vulputate dignissim. Arcu dui vivamus arcu felis bibendum ut
-      tristique et. Sollicitudin ac orci phasellus egestas tellus. Convallis a
-      cras semper auctor. Semper auctor neque vitae tempus quam pellentesque.
-      Eros donec ac odio tempor orci dapibus ultrices. Leo urna molestie at
-      elementum eu. Tellus orci ac auctor augue mauris augue. Sit amet massa
-      vitae tortor condimentum lacinia. Quam adipiscing vitae proin sagittis
-      nisl rhoncus mattis rhoncus. In ornare quam viverra orci sagittis. Diam ut
-      venenatis tellus in. Consequat nisl vel pretium lectus quam id leo in
-      vitae. Dui vivamus arcu felis bibendum ut tristique et egestas. Elementum
-      tempus egestas sed sed risus pretium quam vulputate. Imperdiet massa
-      tincidunt nunc pulvinar sapien et ligula ullamcorper. Tortor at risus
-      viverra adipiscing. Mi sit amet mauris
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, a? Hic
-      accusantium corporis dolore, suscipit eius veniam vel nemo nisi expedita
-      exercitationem aliquam dicta vero unde quae neque quasi
-    </p>
+
+    <!-- Login Modal starts -->
+    <div class="loginmodal" id="login-modal">
+      <div class="loginmodal__content">
+        <span class="close-btn">&times;</span>
+        <div class="loginmodal__title">Log In</div>
+        <form action="/" method="get" class="loginmodal__form flex">
+          <div class="input-container">
+            <input
+              type="email"
+              id="email"
+              class="email-input"
+              placeholder=" "
+            />
+            <label for="email" class="email-label">Email</label>
+          </div>
+          <!-- <div class="input-fields">
+            <input type="password" id="password" class="password-input" />
+            <label for="password" class="password-label">Password</label>
+          </div> -->
+        </form>
+      </div>
+    </div>
   </body>
 </html>

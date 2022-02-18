@@ -34,19 +34,19 @@ btnHamburger.addEventListener("click", function () {
 });
 
 // // Modal Items
-// const modal = document.getElementById('log-modal');
-// const btn = document.getElementById('logbtn');
-// const span = document.getElementsByClassName('close')[0];
+const modal = document.querySelector("#login-modal");
+const openBtn = document.querySelector("#logbtn");
+const closeBtn = document.querySelector(".close-btn");
 
 // // Click events
-// btn.onclick = function(){
-//     modal.style.display = "block";
-// }
-// span.onclick = function(){
-//     modal.style.display = "none";
-// }
-// window.onclick = function(event){
-//     if(event.target == modal){
-//         modal.style.display = "none";
-//     }
-// }
+openBtn.onclick = function () {
+  modal.style.display = "block";
+};
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+};
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
