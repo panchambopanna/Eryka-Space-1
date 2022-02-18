@@ -134,7 +134,7 @@ button .button-basic {
   text-align: center;
   padding: 3rem 1.875rem;
   border: 1px solid black;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
@@ -213,14 +213,14 @@ button .button-basic {
 @media (max-width: 39.9375em) {
   .header .header__hamburger {
     position: absolute;
-    top: 20%;
-    right: 2rem;
+    top: 15%;
+    right: 1rem;
   }
 }
 
 .header .header__searchbox {
   width: 60%;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: 1px solid #c7c7c7;
 }
 
@@ -242,7 +242,7 @@ button .button-basic {
       -ms-flex: 1;
           flex: 1;
   line-height: 2.5rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   font-size: 1rem;
@@ -251,7 +251,7 @@ button .button-basic {
 .header .header__cta1, .header .header__cta2 {
   padding: 0.5rem 1rem;
   border: 1px solid #c7c7c7;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   font-weight: 400;
   color: black;
   -webkit-transition: color 0.3s ease-in-out;
@@ -321,7 +321,7 @@ button .button-basic {
   background-color: white;
   margin-top: 0.5rem;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .header .header__menu a {
@@ -336,5 +336,81 @@ button .button-basic {
 
 .header .header__cta .header__cta1, .header .header__cta .header__cta2 {
   margin: 1rem;
+}
+
+.loginmodal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loginmodal__content {
+  position: relative;
+  background-color: white;
+  margin: 10% auto;
+  width: 20%;
+  border-radius: 1rem;
+}
+
+.loginmodal__content .close-btn {
+  position: absolute;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.loginmodal__title {
+  font-size: 1.375rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.loginmodal__form {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loginmodal__form .input-container {
+  margin: 1rem;
+}
+
+.loginmodal__form .input-container .email-input {
+  font-size: 1.125rem;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #c7c7c7;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+.loginmodal__form .input-container .email-input:focus {
+  border-color: #80d9ff;
+}
+
+.loginmodal__form .input-container .email-label {
+  position: absolute;
+  font-size: 1.375rem;
+  left: 2rem;
+  top: 1.8rem;
+  padding: 0 0.2rem;
+  cursor: text;
+  -webkit-transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+  transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+  background-color: white;
+}
+
+.email-input:focus ~ .email-label,
+.email-input:not(:placeholder-shown).email-input:not(:focus) ~ .email-label {
+  top: 0.4rem;
+  font-size: 0.875rem;
+  left: 1.5rem;
+  color: #005980;
 }
 /*# sourceMappingURL=style.css.map */

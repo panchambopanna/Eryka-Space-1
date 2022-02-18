@@ -59,15 +59,15 @@
     }
     @include breakpoint-down(small) {
       position: absolute;
-      top: 20%;
-      right: 2rem;
+      top: 15%;
+      right: 1rem;
     }
   }
 
   // searchbox container
   #{&}__searchbox {
     width: 60%;
-    border-radius: $b-radius;
+    border-radius: $radius;
     border: 1px solid $gray100;
     @include breakpoint-down(small) {
       width: 100%;
@@ -82,7 +82,7 @@
     input {
       flex: 1;
       line-height: 2.5rem;
-      border-radius: $b-radius;
+      border-radius: $radius;
       border: none;
       outline: none;
       font-size: 1rem;
@@ -92,7 +92,7 @@
   #{&}__cta1 {
     padding: 0.5rem 1rem;
     border: 1px solid $gray100;
-    border-radius: $b-radius;
+    border-radius: $radius;
     font-weight: 400;
     color: $black;
     transition: color 0.3s ease-in-out;
@@ -154,7 +154,7 @@
     background-color: $white;
     margin-top: 0.5rem;
     padding: 1rem;
-    border-radius: $b-radius;
+    border-radius: $radius;
 
     a {
       display: block;
