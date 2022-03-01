@@ -36,10 +36,10 @@
     position: relative;
     padding: 0.5rem 2%;
     border-bottom: 1px solid $gray100;
+    background-color: $white;
 
     @include breakpoint-down(small) {
-      display: block;
-      background-color: $white;
+      flex-wrap: wrap;
     }
   }
 
@@ -47,20 +47,16 @@
   #{&}__hamburger {
     > span {
       display: block;
-      width: 24px;
+      width: 20px;
       height: 2px;
+      margin: 0 0.4rem;
       background-color: $black;
       transition: all 0.3s ease-in-out;
       transform-origin: left center;
 
       &:not(:last-child) {
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.3rem;
       }
-    }
-    @include breakpoint-down(small) {
-      position: absolute;
-      top: 15%;
-      right: 1rem;
     }
   }
 
@@ -99,12 +95,18 @@
     &:hover {
       color: $gray500;
     }
+    @include breakpoint-down(small) {
+      position: absolute;
+      right: 3rem;
+      top: 1rem;
+      padding: 0.2rem 0.5rem;
+    }
   }
   #{&}__cta2 {
     @extend .header__cta1;
     background-color: $primary;
     border: 1px solid $primary;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     transition: 0.3s ease-in-out;
     &:hover {
       color: $white;
@@ -160,14 +162,6 @@
       display: block;
       color: $black;
       padding: 0.5rem;
-    }
-  }
-  // call-to-action buttons for mobile
-  #{&}__cta {
-    text-align: center;
-
-    .header__cta1 {
-      margin: 1rem;
     }
   }
 }

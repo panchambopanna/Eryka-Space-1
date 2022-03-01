@@ -30,14 +30,10 @@
       <!-- Top navigation bar -->
       <div class="header__topnav flex flex-jc-sb flex-ai-c">
         <!-- logo image -->
-        <a href="/html/index.html" class="header__logo">
-          <img src="/images/eryka space.png" alt="Eryka Space logo" />
-        </a>
-
-        <!-- search box container -->
-        <div class="header__searchbox flex flex-ai-c">
-          <i class="fas fa-search"></i>
-          <input type="search" placeholder="Search for Creators" />
+        <div class="header__logo">
+          <a href="/html/index.html">
+            <img src="/images/eryka space.png" alt="Eryka Space logo" />
+          </a>
         </div>
 
         <!-- hamberger menu -->
@@ -50,15 +46,22 @@
           <span></span>
           <span></span>
         </a>
+        <!-- search box container -->
+        <div class="header__searchbox flex flex-ai-c">
+          <i class="fas fa-search"></i>
+          <input type="search" placeholder="Search for Creators" />
+        </div>
 
         <!-- container for cta buttons -->
-        <div class="hide-for-mobile">
+        <div>
           <a href="#" class="header__cta1" id="logbtn">Log In</a>
-          <a href="#" class="header__cta2" id="signbtn"> Sign Up</a>
+          <a href="#" class="header__cta2 hide-for-mobile" id="signbtn">
+            Sign Up</a
+          >
         </div>
       </div>
 
-      <!--secondary Navigation links -->
+      <!--secondary Navigation links for desktop -->
       <nav class="hide-for-mobile flex flex-jc-sb flex-ai-c">
         <a href="/html/index.html">FashionDesigners</a>
         <a href="/html/models.html">Models</a>
@@ -72,20 +75,14 @@
 
       <!-- secondary mobile navigations -->
       <div class="header__menu hide-for-desktop has-fade">
-        <div>
-          <a href="#">FashionDesigners</a>
-          <a href="#">Models</a>
-          <a href="#">Makeup/Hair</a>
-          <a href="#">Photographers/Retouchers</a>
-          <a href="#">Videographers/Editors</a>
-          <a href="#">Studios</a>
-          <a href="#">Rent/Sales</a>
-          <a href="#">Props/Jewellary</a>
-        </div>
-        <div class="header__cta">
-          <a href="#" class="header__cta1" id="logbtn">Log In</a>
-          <a href="#" class="header__cta2"> Sign Up</a>
-        </div>
+        <a href="#">FashionDesigners</a>
+        <a href="#">Models</a>
+        <a href="#">Makeup/Hair</a>
+        <a href="#">Photographers/Retouchers</a>
+        <a href="#">Videographers/Editors</a>
+        <a href="#">Studios</a>
+        <a href="#">Rent/Sales</a>
+        <a href="#">Props/Jewellary</a>
       </div>
     </header>
     <!-- Navigation section ends -->
@@ -94,7 +91,7 @@
     <div class="loginmodal" id="login-modal">
       <div class="loginmodal__content">
         <span class="close-btn">&times;</span>
-        <div class="loginmodal__title">Log In</div>
+        <h1 class="loginmodal__title">Log In</h1>
         <form action="/" method="get" class="loginmodal__form flex">
           <div class="input-container">
             <input
