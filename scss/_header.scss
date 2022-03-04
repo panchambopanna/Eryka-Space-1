@@ -136,9 +136,8 @@
         opacity: 0;
         transition: 0.3s ease-in-out;
       }
-      &:hover {
-        color: $gray500;
-      }
+
+      &:hover,
       &.active {
         &::before {
           opacity: 1;

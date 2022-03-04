@@ -1,10 +1,12 @@
 // Active page links
-const activePage = window.location.pathname;
-const navLinks = document.querySelectorAll("nav a").forEach((link) => {
-  if (link.href.includes(`${activePage}`)) {
-    link.classList.add("active");
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll("a");
+const menuLength = menuItem.length;
+for (let i = 0; i < menuLength; i++) {
+  if (menuItem[i].href === currentLocation) {
+    menuItem[i].className = "active";
   }
-});
+}
 
 // Hamburger menu
 const btnHamburger = document.querySelector("#btnHamburger");
