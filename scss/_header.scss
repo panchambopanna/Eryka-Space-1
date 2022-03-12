@@ -43,23 +43,6 @@
     }
   }
 
-  //Mobile hamburger icon styles
-  #{&}__hamburger {
-    > span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      margin: 0 0.4rem;
-      background-color: $black;
-      transition: all 0.3s ease-in-out;
-      transform-origin: left center;
-
-      &:not(:last-child) {
-        margin-bottom: 0.3rem;
-      }
-    }
-  }
-
   // searchbox container
   #{&}__searchbox {
     width: 60%;
@@ -111,6 +94,28 @@
     &:hover {
       color: $white;
       box-shadow: 1px 1px 10px $black;
+    }
+  }
+
+  //Mobile hamburger icon styles
+  #{&}__hamburger {
+    > span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 0 0.4rem;
+      background-color: $black;
+      transition: all 0.3s ease-in-out;
+      transform-origin: left center;
+
+      &:not(:last-child) {
+        margin-bottom: 0.3rem;
+      }
+    }
+    @include breakpoint-down(small) {
+      position: absolute;
+      right: 0.5rem;
+      top: 1.5rem;
     }
   }
   // secondary navigation links
