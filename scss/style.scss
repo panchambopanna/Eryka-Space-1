@@ -1,8 +1,8 @@
 // functional styles
-@import "variables";
-@import "mixins";
-@import "animations";
+@use "variables";
+@use "mixins";
+@use "animations";
 // element styles
-@import "global";
-@import "header";
-@import "modal";
+@use "global";
+@use "header";
+@use "modal";
