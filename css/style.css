@@ -31,7 +31,6 @@
     opacity: 1;
   }
 }
-
 .fade-in {
   -webkit-animation: fade-in 0.2s ease-in-out forwards;
           animation: fade-in 0.2s ease-in-out forwards;
@@ -66,7 +65,6 @@
     opacity: 0;
   }
 }
-
 .fade-out {
   -webkit-animation: fade-out 0.2s ease-in-out forwards;
           animation: fade-out 0.2s ease-in-out forwards;
@@ -79,8 +77,7 @@ html {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -93,7 +90,6 @@ body {
   color: black;
   line-height: 1.5;
 }
-
 body.noscroll {
   overflow: hidden;
 }
@@ -106,27 +102,16 @@ a:hover {
 }
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .flex-jc-sb {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .flex-jc-c {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .flex-ai-c {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 button .button-basic {
@@ -153,24 +138,17 @@ button .button-basic {
 .header {
   background-color: white;
   width: 100%;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-
 .header.open .header__hamburger > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 .header.open .header__hamburger > span:nth-child(2) {
   opacity: 0;
 }
-
 .header.open .header__hamburger > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
-
 .header .overlay {
   opacity: 0;
   position: fixed;
@@ -178,84 +156,54 @@ button .button-basic {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
 }
-
 .header .header__topnav {
   position: relative;
   padding: 0.5rem 2%;
   border-bottom: 1px solid #c7c7c7;
   background-color: white;
 }
-
 @media (max-width: 39.9375em) {
   .header .header__topnav {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
-
-.header .header__hamburger > span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  margin: 0 0.4rem;
-  background-color: black;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-transform-origin: left center;
-          transform-origin: left center;
-}
-
-.header .header__hamburger > span:not(:last-child) {
-  margin-bottom: 0.3rem;
-}
-
 .header .header__searchbox {
   width: 60%;
   border-radius: 0.5rem;
   border: 1px solid #c7c7c7;
 }
-
 @media (max-width: 39.9375em) {
   .header .header__searchbox {
     width: 100%;
     margin: 0.2rem auto;
   }
 }
-
 .header .header__searchbox .fas {
   font-size: 1rem;
   color: #919191;
   padding: 0 0.5rem;
 }
-
 .header .header__searchbox input {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   line-height: 2.5rem;
   border-radius: 0.5rem;
   border: none;
   outline: none;
   font-size: 1rem;
 }
-
 .header .header__cta1, .header .header__cta2 {
   padding: 0.5rem 1rem;
   border: 1px solid #c7c7c7;
   border-radius: 0.5rem;
   font-weight: 400;
   color: black;
-  -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
-
 .header .header__cta1:hover, .header .header__cta2:hover {
   color: #5e5e5e;
 }
-
 @media (max-width: 39.9375em) {
   .header .header__cta1, .header .header__cta2 {
     position: absolute;
@@ -264,34 +212,45 @@ button .button-basic {
     padding: 0.2rem 0.5rem;
   }
 }
-
 .header .header__cta2 {
   background-color: #00b3ff;
   border: 1px solid #00b3ff;
   margin-left: 0.5rem;
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-
 .header .header__cta2:hover {
   color: white;
-  -webkit-box-shadow: 1px 1px 10px black;
-          box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 10px black;
 }
-
+.header .header__hamburger > span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 0 0.4rem;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+  transform-origin: left center;
+}
+.header .header__hamburger > span:not(:last-child) {
+  margin-bottom: 0.3rem;
+}
+@media (max-width: 39.9375em) {
+  .header .header__hamburger {
+    position: absolute;
+    right: 0.5rem;
+    top: 1.5rem;
+  }
+}
 .header nav {
   padding: 1rem 2%;
   position: relative;
 }
-
 .header nav a {
   position: relative;
   font-size: 1.125rem;
   color: black;
-  -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
-
 .header nav a::before {
   content: "";
   position: absolute;
@@ -303,26 +262,21 @@ button .button-basic {
   border-radius: 10px;
   background-color: #00b3ff;
   opacity: 0;
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-
 .header nav a:hover::before, .header nav a.active::before {
   opacity: 1;
 }
-
 .header .header__menu {
   position: absolute;
   width: calc(100% - 2rem);
   left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
   background-color: white;
   margin-top: 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
 }
-
 .header .header__menu a {
   display: block;
   color: black;
@@ -338,7 +292,6 @@ button .button-basic {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 .loginmodal__content {
   position: relative;
   background-color: white;
@@ -346,31 +299,23 @@ button .button-basic {
   width: 20%;
   border-radius: 1rem;
 }
-
 .loginmodal__content .close-btn {
   position: absolute;
   right: 1rem;
   font-size: 2rem;
   cursor: pointer;
 }
-
 .loginmodal__title {
   padding: 1.5rem 0;
   text-align: center;
 }
-
 .loginmodal__form {
   position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .loginmodal__form .input-container {
   margin: 1rem;
 }
-
 .loginmodal__form .input-container .email-input {
   font-size: 1.125rem;
   width: 100%;
@@ -379,11 +324,9 @@ button .button-basic {
   border-radius: 0.5rem;
   outline: none;
 }
-
 .loginmodal__form .input-container .email-input:focus {
   border-color: #80d9ff;
 }
-
 .loginmodal__form .input-container .email-label {
   position: absolute;
   font-size: 1.375rem;
@@ -391,9 +334,22 @@ button .button-basic {
   top: 1.8rem;
   padding: 0 0.2rem;
   cursor: text;
-  -webkit-transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
   transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
   background-color: white;
+}
+
+.email-input:not(:-moz-placeholder-shown).email-input:not(:focus) ~ .email-label {
+  top: 0.4rem;
+  font-size: 0.875rem;
+  left: 1.5rem;
+  color: #005980;
+}
+
+.email-input:not(:-ms-input-placeholder).email-input:not(:focus) ~ .email-label {
+  top: 0.4rem;
+  font-size: 0.875rem;
+  left: 1.5rem;
+  color: #005980;
 }
 
 .email-input:focus ~ .email-label,
@@ -402,5 +358,4 @@ button .button-basic {
   font-size: 0.875rem;
   left: 1.5rem;
   color: #005980;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
