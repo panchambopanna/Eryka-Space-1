@@ -1,0 +1,395 @@
+@use "../globals";
+@use "../utilities" as *;
+
+.loginmodal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: hsla(0, 0%, 0%, 0.8);
+
+  #{&}__content {
+    width: 22rem;
+    background-color: $white;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    flex-direction: column;
+
+    .close-btn {
+      position: absolute;
+      right: 50rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: $gray500;
+      @include breakpoint-down(small) {
+        right: 1.5rem;
+      }
+    }
+  }
+
+  #{&}__title {
+    text-align: center;
+  }
+
+  #{&}__form {
+    position: relative;
+    flex-direction: column;
+
+    .input-container {
+      margin-top: $font-bg;
+
+      .email-input {
+        font-size: $font-md;
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid $gray100;
+        border-radius: $radius;
+        outline: none;
+
+        &:focus {
+          border-color: $primary-light;
+        }
+      }
+      .email-label {
+        position: absolute;
+        font-size: $font-md;
+        color: $gray500;
+        left: 1rem;
+        top: 2.2rem;
+        padding: 0 0.2rem;
+        cursor: text;
+        transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+        background-color: $white;
+      }
+
+      .password-input {
+        @extend .email-input;
+      }
+
+      .password-label {
+        position: absolute;
+        font-size: $font-md;
+        color: $gray500;
+        left: 1rem;
+        top: 7.1rem;
+        padding: 0 0.2rem;
+        cursor: text;
+        transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+        background-color: $white;
+      }
+      .fa {
+        position: absolute;
+        top: 7.5rem;
+        right: 0.8rem;
+        color: $gray500;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .email-input:focus ~ .email-label,
+  .email-input:not(:placeholder-shown).email-input:not(:focus) ~ .email-label {
+    top: 0.8rem;
+    font-size: $font-sm;
+    color: $primary-dark;
+  }
+
+  .password-input:focus ~ .password-label,
+  .password-input:not(:placeholder-shown).password-input:not(:focus)
+    ~ .password-label {
+    top: 5.8rem;
+    font-size: $font-sm;
+    color: $primary-dark;
+  }
+
+  #{&}__forgotpassword {
+    width: 100%;
+    margin-top: 0.4rem;
+    text-align: right;
+
+    a {
+      font-size: $font-sm;
+      color: $gray700;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  #{&}__loginbtn {
+    margin: 1rem 0;
+  }
+
+  #{&}__googlelogin {
+    width: 100%;
+
+    hr {
+      color: $gray100;
+      height: 1px;
+    }
+
+    .googlelogin-container {
+      width: fit-content;
+      height: 3rem;
+      margin: 0.8rem auto;
+      padding: 0 0 0px 1px;
+      background-color: #4286f5;
+      cursor: pointer;
+
+      img {
+        background-color: $white;
+        padding: 0.8rem;
+      }
+      span {
+        color: $white;
+        font-weight: 500;
+        padding: 2rem;
+      }
+    }
+  }
+  #{&}__signup {
+    width: 100%;
+    font-size: 0.9rem;
+    margin: 0.8rem 0;
+    color: $gray700;
+    font-weight: 500;
+
+    a {
+      color: $primary;
+      padding-left: 0.2rem;
+    }
+  }
+}
+
+.signupmodal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: hsla(0, 0%, 0%, 0.8);
+
+  #{&}__content {
+    width: 22rem;
+    background-color: $white;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    flex-direction: column;
+
+    .close-btn {
+      position: absolute;
+      right: 50rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: $gray500;
+      @include breakpoint-down(small) {
+        right: 1.5rem;
+      }
+    }
+  }
+
+  #{&}__title {
+    text-align: center;
+  }
+
+  #{&}__form {
+    position: relative;
+    flex-direction: column;
+
+    .input-container {
+      margin-top: $font-bg;
+
+      .fname-input {
+        font-size: $font-md;
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid $gray100;
+        border-radius: $radius;
+        outline: none;
+
+        &:focus {
+          border-color: $primary-light;
+        }
+      }
+      .fname-label {
+        position: absolute;
+        font-size: $font-md;
+        color: $gray500;
+        left: 1rem;
+        top: 2.2rem;
+        padding: 0 0.2rem;
+        cursor: text;
+        transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+        background-color: $white;
+      }
+
+      .email-input {
+        @extend .fname-input;
+      }
+
+      .email-label {
+        position: absolute;
+        font-size: $font-md;
+        color: $gray500;
+        left: 1rem;
+        top: 7.1rem;
+        padding: 0 0.2rem;
+        cursor: text;
+        transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+        background-color: $white;
+      }
+
+      .password-input {
+        @extend .fname-input;
+      }
+      .password-label {
+        position: absolute;
+        font-size: $font-md;
+        color: $gray500;
+        left: 1rem;
+        top: 12rem;
+        padding: 0 0.2rem;
+        cursor: text;
+        transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+        background-color: $white;
+      }
+      .fa {
+        position: absolute;
+        top: 12.4rem;
+        right: 0.8rem;
+        color: $gray500;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .fname-input:focus ~ .fname-label,
+  .fname-input:not(:placeholder-shown).fname-input:not(:focus) ~ .fname-label {
+    top: 0.7rem;
+    font-size: $font-sm;
+    color: $primary-dark;
+  }
+
+  .email-input:focus ~ .email-label,
+  .email-input:not(:placeholder-shown).email-input:not(:focus) ~ .email-label {
+    top: 5.6rem;
+    font-size: $font-sm;
+    color: $primary-dark;
+  }
+
+  .password-input:focus ~ .password-label,
+  .password-input:not(:placeholder-shown).password-input:not(:focus)
+    ~ .password-label {
+    top: 10.5rem;
+    font-size: $font-sm;
+    color: $primary-dark;
+  }
+
+  #{&}__signbtn {
+    margin: 1.5rem 0;
+  }
+
+  #{&}__googlelogin {
+    width: 100%;
+
+    hr {
+      color: $gray100;
+      height: 1px;
+    }
+
+    .googlelogin-container {
+      width: fit-content;
+      height: 3rem;
+      margin: 0.8rem auto;
+      padding: 0 0 0px 1px;
+      background-color: #4286f5;
+      cursor: pointer;
+
+      img {
+        background-color: $white;
+        padding: 0.8rem;
+      }
+      span {
+        color: $white;
+        font-weight: 500;
+        padding: 2rem;
+      }
+    }
+  }
+  #{&}__login {
+    width: 100%;
+    font-size: 0.9rem;
+    margin: 0.8rem 0;
+    color: $gray700;
+    font-weight: 500;
+
+    a {
+      color: $primary;
+      padding-left: 0.2rem;
+    }
+  }
+}
+
+.forgotmodal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: hsla(0, 0%, 0%, 0.8);
+
+  &__content {
+    width: 22rem;
+    background-color: $white;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    flex-direction: column;
+
+    .close-btn {
+      position: absolute;
+      right: 50rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: $gray500;
+      @include breakpoint-down(small) {
+        right: 1.5rem;
+      }
+    }
+  }
+  #{&}__form {
+    position: relative;
+    flex-direction: column;
+
+    .input-container {
+      margin-bottom: 1rem;
+
+      .email-input {
+        font-size: $font-sm;
+        width: 100%;
+        height: 2rem;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $gray500;
+      }
+    }
+    .fotgotbtn {
+      width: 50%;
+      font-weight: 500;
+      margin: 0.6rem 0;
+      padding: 0.6rem;
+      border-radius: 30px;
+      border: none;
+      background-color: $primary;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

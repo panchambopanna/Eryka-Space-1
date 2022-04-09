@@ -1,8 +1,2 @@
-// functional styles
-@use "variables";
-@use "mixins";
-@use "animations";
-// element styles
-@use "global";
-@use "header";
-@use "modal";
+@use "components/header";
+@use "components/modal";

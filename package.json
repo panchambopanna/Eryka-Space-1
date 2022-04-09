@@ -1,0 +1,23 @@
+{
+  "name": "eryka-space",
+  "version": "1.0.0",
+  "description": "Website for Content Creators",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karthikarya/Eryka-Space.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karthikarya/Eryka-Space/issues"
+  },
+  "homepage": "https://github.com/Karthikarya/Eryka-Space#readme",
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}

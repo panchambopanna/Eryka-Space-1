@@ -1,0 +1,52 @@
+@use "../utilities" as *;
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Visibility   // hide for mobile and tablets
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+// hide for desktop viewport widths
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+// basic button
+.basic-btn {
+  font-size: $font-md;
+  font-weight: 500;
+  padding: 0.6rem 3rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: $primary;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

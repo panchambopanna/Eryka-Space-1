@@ -1,20 +1,27 @@
-.has-fade {
-  visibility: hidden;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-@-webkit-keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  line-height: 1.5;
+}
+body.noscroll {
+  overflow: hidden;
+}
+
+.has-fade {
+  visibility: hidden;
 }
 
 @keyframes fade-in {
@@ -32,23 +39,7 @@
   }
 }
 .fade-in {
-  -webkit-animation: fade-in 0.2s ease-in-out forwards;
-          animation: fade-in 0.2s ease-in-out forwards;
-}
-
-@-webkit-keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
-  99% {
-    visibility: visible;
-    opacity: 0;
-  }
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
+  animation: fade-in 0.2s ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -66,38 +57,12 @@
   }
 }
 .fade-out {
-  -webkit-animation: fade-out 0.2s ease-in-out forwards;
-          animation: fade-out 0.2s ease-in-out forwards;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  width: 100%;
-  font-family: "Public Sans", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: black;
-  line-height: 1.5;
-}
-body.noscroll {
-  overflow: hidden;
+  animation: fade-out 0.2s ease-in-out forwards;
 }
 
 a,
 a:visited,
-a:hover {
-  font-size: 1rem;
+a:active {
   text-decoration: none;
 }
 
@@ -114,15 +79,6 @@ a:hover {
   align-items: center;
 }
 
-button .button-basic {
-  font-size: 1rem;
-  text-align: center;
-  padding: 3rem 1.875rem;
-  border: 1px solid black;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
     display: none;
@@ -133,6 +89,20 @@ button .button-basic {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.basic-btn {
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.6rem 3rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #00b3ff;
+  transition: 0.3s ease-in-out;
+}
+.basic-btn:hover {
+  opacity: 0.8;
 }
 
 .header {
@@ -160,7 +130,7 @@ button .button-basic {
 }
 .header .header__topnav {
   position: relative;
-  padding: 0.5rem 2%;
+  padding: 1rem 2%;
   border-bottom: 1px solid #c7c7c7;
   background-color: white;
 }
@@ -170,14 +140,14 @@ button .button-basic {
   }
 }
 .header .header__searchbox {
-  width: 60%;
+  width: 50%;
   border-radius: 0.5rem;
   border: 1px solid #c7c7c7;
 }
 @media (max-width: 39.9375em) {
   .header .header__searchbox {
     width: 100%;
-    margin: 0.2rem auto;
+    margin: 0.4rem auto;
   }
 }
 .header .header__searchbox .fas {
@@ -242,7 +212,7 @@ button .button-basic {
   }
 }
 .header nav {
-  padding: 1rem 2%;
+  padding: 0.8rem 4%;
   position: relative;
 }
 .header nav a {
@@ -258,7 +228,7 @@ button .button-basic {
   height: 5px;
   left: 0;
   right: 0;
-  bottom: -16px;
+  bottom: -13px;
   border-radius: 10px;
   background-color: #00b3ff;
   opacity: 0;
@@ -285,77 +255,351 @@ button .button-basic {
 
 .loginmodal {
   display: none;
+  width: 100%;
+  height: 100%;
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
-.loginmodal__content {
-  position: relative;
+.loginmodal .loginmodal__content {
+  width: 22rem;
   background-color: white;
-  margin: 10% auto;
-  width: 20%;
+  padding: 0 1rem;
   border-radius: 1rem;
+  flex-direction: column;
 }
-.loginmodal__content .close-btn {
+.loginmodal .loginmodal__content .close-btn {
   position: absolute;
-  right: 1rem;
+  right: 50rem;
   font-size: 2rem;
   cursor: pointer;
+  color: #5e5e5e;
 }
-.loginmodal__title {
-  padding: 1.5rem 0;
+@media (max-width: 39.9375em) {
+  .loginmodal .loginmodal__content .close-btn {
+    right: 1.5rem;
+  }
+}
+.loginmodal .loginmodal__title {
   text-align: center;
 }
-.loginmodal__form {
+.loginmodal .loginmodal__form {
   position: relative;
   flex-direction: column;
 }
-.loginmodal__form .input-container {
-  margin: 1rem;
+.loginmodal .loginmodal__form .input-container {
+  margin-top: 1.375rem;
 }
-.loginmodal__form .input-container .email-input {
+.loginmodal .loginmodal__form .input-container .email-input, .loginmodal .loginmodal__form .input-container .password-input {
   font-size: 1.125rem;
   width: 100%;
   padding: 1rem;
-  border: 2px solid #c7c7c7;
+  border: 1px solid #c7c7c7;
   border-radius: 0.5rem;
   outline: none;
 }
-.loginmodal__form .input-container .email-input:focus {
+.loginmodal .loginmodal__form .input-container .email-input:focus, .loginmodal .loginmodal__form .input-container .password-input:focus {
   border-color: #80d9ff;
 }
-.loginmodal__form .input-container .email-label {
+.loginmodal .loginmodal__form .input-container .email-label {
   position: absolute;
-  font-size: 1.375rem;
-  left: 2rem;
-  top: 1.8rem;
+  font-size: 1.125rem;
+  color: #5e5e5e;
+  left: 1rem;
+  top: 2.2rem;
   padding: 0 0.2rem;
   cursor: text;
   transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
   background-color: white;
 }
-
-.email-input:not(:-moz-placeholder-shown).email-input:not(:focus) ~ .email-label {
-  top: 0.4rem;
+.loginmodal .loginmodal__form .input-container .password-label {
+  position: absolute;
+  font-size: 1.125rem;
+  color: #5e5e5e;
+  left: 1rem;
+  top: 7.1rem;
+  padding: 0 0.2rem;
+  cursor: text;
+  transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+  background-color: white;
+}
+.loginmodal .loginmodal__form .input-container .fa {
+  position: absolute;
+  top: 7.5rem;
+  right: 0.8rem;
+  color: #5e5e5e;
+  cursor: pointer;
+}
+.loginmodal .email-input:focus ~ .email-label, .loginmodal .loginmodal__form .input-container .password-input:focus ~ .email-label,
+.loginmodal .email-input:not(:placeholder-shown).email-input:not(:focus) ~ .email-label,
+.loginmodal .loginmodal__form .input-container .password-input:not(:placeholder-shown):not(:focus) ~ .email-label {
+  top: 0.8rem;
   font-size: 0.875rem;
-  left: 1.5rem;
   color: #005980;
 }
-
-.email-input:not(:-ms-input-placeholder).email-input:not(:focus) ~ .email-label {
-  top: 0.4rem;
+.loginmodal .password-input:focus ~ .password-label,
+.loginmodal .password-input:not(:placeholder-shown).password-input:not(:focus) ~ .password-label {
+  top: 5.8rem;
   font-size: 0.875rem;
-  left: 1.5rem;
   color: #005980;
 }
-
-.email-input:focus ~ .email-label,
-.email-input:not(:placeholder-shown).email-input:not(:focus) ~ .email-label {
-  top: 0.4rem;
+.loginmodal .loginmodal__forgotpassword {
+  width: 100%;
+  margin-top: 0.4rem;
+  text-align: right;
+}
+.loginmodal .loginmodal__forgotpassword a {
   font-size: 0.875rem;
-  left: 1.5rem;
+  color: #303030;
+}
+.loginmodal .loginmodal__forgotpassword a:hover {
+  color: black;
+}
+.loginmodal .loginmodal__loginbtn {
+  margin: 1rem 0;
+}
+.loginmodal .loginmodal__googlelogin {
+  width: 100%;
+}
+.loginmodal .loginmodal__googlelogin hr {
+  color: #c7c7c7;
+  height: 1px;
+}
+.loginmodal .loginmodal__googlelogin .googlelogin-container {
+  width: fit-content;
+  height: 3rem;
+  margin: 0.8rem auto;
+  padding: 0 0 0px 1px;
+  background-color: #4286f5;
+  cursor: pointer;
+}
+.loginmodal .loginmodal__googlelogin .googlelogin-container img {
+  background-color: white;
+  padding: 0.8rem;
+}
+.loginmodal .loginmodal__googlelogin .googlelogin-container span {
+  color: white;
+  font-weight: 500;
+  padding: 2rem;
+}
+.loginmodal .loginmodal__signup {
+  width: 100%;
+  font-size: 0.9rem;
+  margin: 0.8rem 0;
+  color: #303030;
+  font-weight: 500;
+}
+.loginmodal .loginmodal__signup a {
+  color: #00b3ff;
+  padding-left: 0.2rem;
+}
+
+.signupmodal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.signupmodal .signupmodal__content {
+  width: 22rem;
+  background-color: white;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+.signupmodal .signupmodal__content .close-btn {
+  position: absolute;
+  right: 50rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #5e5e5e;
+}
+@media (max-width: 39.9375em) {
+  .signupmodal .signupmodal__content .close-btn {
+    right: 1.5rem;
+  }
+}
+.signupmodal .signupmodal__title {
+  text-align: center;
+}
+.signupmodal .signupmodal__form {
+  position: relative;
+  flex-direction: column;
+}
+.signupmodal .signupmodal__form .input-container {
+  margin-top: 1.375rem;
+}
+.signupmodal .signupmodal__form .input-container .fname-input, .signupmodal .signupmodal__form .input-container .password-input, .signupmodal .signupmodal__form .input-container .email-input {
+  font-size: 1.125rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #c7c7c7;
+  border-radius: 0.5rem;
+  outline: none;
+}
+.signupmodal .signupmodal__form .input-container .fname-input:focus, .signupmodal .signupmodal__form .input-container .password-input:focus, .signupmodal .signupmodal__form .input-container .email-input:focus {
+  border-color: #80d9ff;
+}
+.signupmodal .signupmodal__form .input-container .fname-label {
+  position: absolute;
+  font-size: 1.125rem;
+  color: #5e5e5e;
+  left: 1rem;
+  top: 2.2rem;
+  padding: 0 0.2rem;
+  cursor: text;
+  transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+  background-color: white;
+}
+.signupmodal .signupmodal__form .input-container .email-label {
+  position: absolute;
+  font-size: 1.125rem;
+  color: #5e5e5e;
+  left: 1rem;
+  top: 7.1rem;
+  padding: 0 0.2rem;
+  cursor: text;
+  transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+  background-color: white;
+}
+.signupmodal .signupmodal__form .input-container .password-label {
+  position: absolute;
+  font-size: 1.125rem;
+  color: #5e5e5e;
+  left: 1rem;
+  top: 12rem;
+  padding: 0 0.2rem;
+  cursor: text;
+  transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
+  background-color: white;
+}
+.signupmodal .signupmodal__form .input-container .fa {
+  position: absolute;
+  top: 12.4rem;
+  right: 0.8rem;
+  color: #5e5e5e;
+  cursor: pointer;
+}
+.signupmodal .fname-input:focus ~ .fname-label, .signupmodal .signupmodal__form .input-container .email-input:focus ~ .fname-label, .signupmodal .signupmodal__form .input-container .password-input:focus ~ .fname-label,
+.signupmodal .fname-input:not(:placeholder-shown).fname-input:not(:focus) ~ .fname-label,
+.signupmodal .signupmodal__form .input-container .email-input:not(:placeholder-shown):not(:focus) ~ .fname-label,
+.signupmodal .signupmodal__form .input-container .password-input:not(:placeholder-shown):not(:focus) ~ .fname-label {
+  top: 0.7rem;
+  font-size: 0.875rem;
   color: #005980;
-}/*# sourceMappingURL=style.css.map */
+}
+.signupmodal .email-input:focus ~ .email-label, .signupmodal .loginmodal .loginmodal__form .input-container .password-input:focus ~ .email-label, .loginmodal .loginmodal__form .input-container .signupmodal .password-input:focus ~ .email-label,
+.signupmodal .email-input:not(:placeholder-shown).email-input:not(:focus) ~ .email-label,
+.signupmodal .loginmodal .loginmodal__form .input-container .password-input:not(:placeholder-shown):not(:focus) ~ .email-label,
+.loginmodal .loginmodal__form .input-container .signupmodal .password-input:not(:placeholder-shown):not(:focus) ~ .email-label {
+  top: 5.6rem;
+  font-size: 0.875rem;
+  color: #005980;
+}
+.signupmodal .password-input:focus ~ .password-label,
+.signupmodal .password-input:not(:placeholder-shown).password-input:not(:focus) ~ .password-label {
+  top: 10.5rem;
+  font-size: 0.875rem;
+  color: #005980;
+}
+.signupmodal .signupmodal__signbtn {
+  margin: 1.5rem 0;
+}
+.signupmodal .signupmodal__googlelogin {
+  width: 100%;
+}
+.signupmodal .signupmodal__googlelogin hr {
+  color: #c7c7c7;
+  height: 1px;
+}
+.signupmodal .signupmodal__googlelogin .googlelogin-container {
+  width: fit-content;
+  height: 3rem;
+  margin: 0.8rem auto;
+  padding: 0 0 0px 1px;
+  background-color: #4286f5;
+  cursor: pointer;
+}
+.signupmodal .signupmodal__googlelogin .googlelogin-container img {
+  background-color: white;
+  padding: 0.8rem;
+}
+.signupmodal .signupmodal__googlelogin .googlelogin-container span {
+  color: white;
+  font-weight: 500;
+  padding: 2rem;
+}
+.signupmodal .signupmodal__login {
+  width: 100%;
+  font-size: 0.9rem;
+  margin: 0.8rem 0;
+  color: #303030;
+  font-weight: 500;
+}
+.signupmodal .signupmodal__login a {
+  color: #00b3ff;
+  padding-left: 0.2rem;
+}
+
+.forgotmodal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.forgotmodal__content {
+  width: 22rem;
+  background-color: white;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+.forgotmodal__content .close-btn {
+  position: absolute;
+  right: 50rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #5e5e5e;
+}
+@media (max-width: 39.9375em) {
+  .forgotmodal__content .close-btn {
+    right: 1.5rem;
+  }
+}
+.forgotmodal .forgotmodal__form {
+  position: relative;
+  flex-direction: column;
+}
+.forgotmodal .forgotmodal__form .input-container {
+  margin-bottom: 1rem;
+}
+.forgotmodal .forgotmodal__form .input-container .email-input, .forgotmodal .forgotmodal__form .loginmodal .loginmodal__form .input-container .password-input, .loginmodal .loginmodal__form .forgotmodal .forgotmodal__form .input-container .password-input {
+  font-size: 0.875rem;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #5e5e5e;
+}
+.forgotmodal .forgotmodal__form .fotgotbtn {
+  width: 50%;
+  font-weight: 500;
+  margin: 0.6rem 0;
+  padding: 0.6rem;
+  border-radius: 30px;
+  border: none;
+  background-color: #00b3ff;
+  cursor: pointer;
+}
+.forgotmodal .forgotmodal__form .fotgotbtn:hover {
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=style.css.map */

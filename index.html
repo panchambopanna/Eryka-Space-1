@@ -32,7 +32,7 @@
         <!-- logo image -->
         <div class="header__logo">
           <a href="index.html">
-            <img src="images/erykaspace.png" alt="Eryka Space logo" />
+            <img src="images/eryka space.png" alt="Eryka Space logo" />
           </a>
         </div>
 
@@ -88,26 +88,135 @@
     </header>
 
     <!-- Navigation section ends -->
-    <h1>this is designters</h1>
+    <h1>this is Designers</h1>
+
     <!-- Login Modal starts -->
-    <div class="loginmodal" id="login-modal">
-      <div class="loginmodal__content">
+    <div class="loginmodal flex-ai-c flex-jc-c" id="login-modal">
+      <div class="loginmodal__content flex">
         <span class="close-btn">&times;</span>
-        <h1 class="loginmodal__title">Log In</h1>
+        <h2 class="loginmodal__title">Log In</h2>
         <form action="/" method="get" class="loginmodal__form flex">
           <div class="input-container">
             <input
               type="email"
-              id="email"
+              name="logemail"
+              id="logemail"
               class="email-input"
               placeholder=" "
+              required
             />
-            <label for="email" class="email-label">Email</label>
+            <label for="logemail" class="email-label">Email</label>
           </div>
-          <!-- <div class="input-fields">
-            <input type="password" id="password" class="password-input" />
-            <label for="password" class="password-label">Password</label>
-          </div> -->
+          <div class="input-container">
+            <input
+              type="password"
+              name="logpassword"
+              id="logpassword"
+              class="password-input"
+              placeholder=" "
+              required
+            />
+            <label for="logpassword" class="password-label">Password</label>
+            <i class="fa fa-eye-slash ShowHidePw"></i>
+          </div>
+        </form>
+        <div class="loginmodal__forgotpassword">
+          <a id="forgot-password-btn" href="#">Forgot password?</a>
+        </div>
+        <div class="loginmodal__loginbtn flex flex-jc-c">
+          <button class="basic-btn" id="loginbtn" type="submit">Log In</button>
+        </div>
+        <div class="loginmodal__googlelogin">
+          <hr />
+          <div class="googlelogin-container flex flex-ai-c">
+            <img src="/images/google-icon.5c764c55.svg" alt="google-icon" />
+            <span>Log In with Google</span>
+          </div>
+          <hr />
+        </div>
+        <div class="loginmodal__signup flex flex-jc-c">
+          Not a Eryka User?
+          <a href="#"> Sign Up</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="signupmodal flex-ai-c flex-jc-c" id="signup-modal">
+      <div class="signupmodal__content flex">
+        <span class="close-btn">&times;</span>
+        <h2 class="signupmodal__title">Sign Up</h2>
+        <form action="/" method="get" class="signupmodal__form flex">
+          <div class="input-container">
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              class="fname-input"
+              placeholder=" "
+              required
+            />
+            <label for="fullname" class="fname-label">Full Name</label>
+          </div>
+          <div class="input-container">
+            <input
+              type="email"
+              name="signemail"
+              id="signemail"
+              class="email-input"
+              placeholder=" "
+              required
+            />
+            <label for="signemail" class="email-label">Email</label>
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              name="signpassword"
+              id="signpassword"
+              class="password-input"
+              placeholder=" "
+              required
+            />
+            <label for="signpassword" class="password-label">Password</label>
+            <i class="fa fa-eye-slash ShowHidePw"></i>
+          </div>
+        </form>
+        <div class="signupmodal__signbtn flex flex-jc-c">
+          <button class="basic-btn" id="signbtn" type="submit">Sign Up</button>
+        </div>
+        <div class="signupmodal__googlelogin">
+          <hr />
+          <div class="googlelogin-container flex flex-ai-c">
+            <img src="/images/google-icon.5c764c55.svg" alt="google-icon" />
+            <span>Sign Up with Google</span>
+          </div>
+          <hr />
+        </div>
+        <div class="signupmodal__login flex flex-jc-c">
+          Already Eryka User?
+          <a href="#">Log In</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="forgotmodal flex-ai-c flex-jc-c" id="forgotpassword">
+      <div class="forgotmodal__content">
+        <span class="close-btn">&times;</span>
+        <h3>Password Recovery</h3>
+        <form action="/" method="get" class="forgotmodal__form flex">
+          <div class="input-container">
+            <input
+              type="email"
+              name="email"
+              id="forgotemail"
+              class="email-input"
+              placeholder="Enter Your Email "
+              required
+            />
+          </div>
+          <button class="fotgotbtn" id="forgotbtn" type="submit">
+            Reset Password
+          </button>
         </form>
       </div>
     </div>

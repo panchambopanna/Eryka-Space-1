@@ -35,14 +35,13 @@ btnHamburger.addEventListener("click", function () {
   }
 });
 
-// // Modal Items
+// Modal Items
 const modal = document.querySelector("#login-modal");
 const openBtn = document.querySelector("#logbtn");
 const closeBtn = document.querySelector(".close-btn");
 
-// // Click events
 openBtn.onclick = function () {
-  modal.style.display = "block";
+  modal.style.display = "flex";
 };
 closeBtn.onclick = function () {
   modal.style.display = "none";
@@ -52,3 +51,27 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+// show amd hide password fields
+const pwShowHide = document.querySelectorAll(".ShowHidePw");
+const pwFields = document.querySelectorAll(".password-input");
+
+pwShowHide.forEach((eyeIcon) => {
+  eyeIcon.addEventListener("click", () => {
+    pwFields.forEach((pwfield) => {
+      if (pwfield.type === "password") {
+        pwfield.type = "text";
+
+        pwShowHide.forEach((icon) => {
+          icon.classList.replace("fa-eye-slash", "fa-eye");
+        });
+      } else {
+        pwfield.type = "password";
+
+        pwShowHide.forEach((icon) => {
+          icon.classList.replace("fa-eye", "fa-eye-slash");
+        });
+      }
+    });
+  });
+});
