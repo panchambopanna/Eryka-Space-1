@@ -207,8 +207,8 @@ a:active {
 @media (max-width: 39.9375em) {
   .header .header__hamburger {
     position: absolute;
-    right: 0.5rem;
-    top: 1.5rem;
+    right: 0.6rem;
+    top: 1.8rem;
   }
 }
 .header nav {
@@ -600,6 +600,44 @@ a:active {
 }
 .forgotmodal .forgotmodal__form .fotgotbtn:hover {
   opacity: 0.8;
+}
+
+.header__userAvatar {
+  position: relative;
+  display: inline-block;
+}
+.header__userAvatar img {
+  height: 40px;
+  border-radius: 50%;
+}
+@media (max-width: 39.9375em) {
+  .header__userAvatar {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+  }
+}
+.header__userAvatar .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0.1rem;
+  background-color: #c7c7c7;
+  min-width: 150px;
+  z-index: 1;
+}
+.header__userAvatar .dropdown-content a {
+  color: black;
+  padding: 0.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #919191;
+}
+
+.header__userAvatar:hover .dropdown-content {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 @use "../globals";
 @use "../utilities" as *;
 
+// background styles
 .loginmodal {
   display: none;
   width: 100%;
@@ -10,6 +11,7 @@
   top: 0;
   background-color: hsla(0, 0%, 0%, 0.8);
 
+  // container for login modal
   #{&}__content {
     width: 22rem;
     background-color: $white;
@@ -28,15 +30,16 @@
       }
     }
   }
-
+  // login title
   #{&}__title {
     text-align: center;
   }
-
+  // container for login form
   #{&}__form {
     position: relative;
     flex-direction: column;
 
+    // container for input and label fields
     .input-container {
       margin-top: $font-bg;
 
@@ -79,6 +82,7 @@
         transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
         background-color: $white;
       }
+      // password eye icon
       .fa {
         position: absolute;
         top: 7.5rem;
@@ -89,6 +93,7 @@
     }
   }
 
+  // animation for labels in input fields
   .email-input:focus ~ .email-label,
   .email-input:not(:placeholder-shown).email-input:not(:focus) ~ .email-label {
     top: 0.8rem;
@@ -104,6 +109,7 @@
     color: $primary-dark;
   }
 
+  // forgot password link
   #{&}__forgotpassword {
     width: 100%;
     margin-top: 0.4rem;
@@ -119,10 +125,12 @@
     }
   }
 
+  // login cta button
   #{&}__loginbtn {
     margin: 1rem 0;
   }
 
+  // login with google button container
   #{&}__googlelogin {
     width: 100%;
 
@@ -150,6 +158,8 @@
       }
     }
   }
+
+  // dont have account link container
   #{&}__signup {
     width: 100%;
     font-size: 0.9rem;
@@ -164,6 +174,7 @@
   }
 }
 
+// background styles
 .signupmodal {
   display: none;
   width: 100%;
@@ -173,6 +184,7 @@
   top: 0;
   background-color: hsla(0, 0%, 0%, 0.8);
 
+  // container for login modal
   #{&}__content {
     width: 22rem;
     background-color: $white;
@@ -192,14 +204,17 @@
     }
   }
 
+  // Signup title
   #{&}__title {
     text-align: center;
   }
 
+  // container for Signup form
   #{&}__form {
     position: relative;
     flex-direction: column;
 
+    // container for input and label fields
     .input-container {
       margin-top: $font-bg;
 
@@ -257,6 +272,7 @@
         transition: top 0.2s ease-in, left 0.2s ease-in, font-size 0.2s ease-in;
         background-color: $white;
       }
+      // password eye icon
       .fa {
         position: absolute;
         top: 12.4rem;
@@ -267,6 +283,7 @@
     }
   }
 
+  // animation for labels in input fields
   .fname-input:focus ~ .fname-label,
   .fname-input:not(:placeholder-shown).fname-input:not(:focus) ~ .fname-label {
     top: 0.7rem;
@@ -289,10 +306,12 @@
     color: $primary-dark;
   }
 
+  // Signup cta button
   #{&}__signbtn {
     margin: 1.5rem 0;
   }
 
+  // login with google button container
   #{&}__googlelogin {
     width: 100%;
 
@@ -320,6 +339,8 @@
       }
     }
   }
+
+  // have account link container
   #{&}__login {
     width: 100%;
     font-size: 0.9rem;
@@ -334,6 +355,7 @@
   }
 }
 
+// background styles
 .forgotmodal {
   display: none;
   width: 100%;
@@ -343,6 +365,7 @@
   top: 0;
   background-color: hsla(0, 0%, 0%, 0.8);
 
+  // container for forgot password modal
   &__content {
     width: 22rem;
     background-color: $white;
@@ -361,10 +384,12 @@
       }
     }
   }
+  // container for forgot password form
   #{&}__form {
     position: relative;
     flex-direction: column;
 
+    // container for input and label fields
     .input-container {
       margin-bottom: 1rem;
 
@@ -377,6 +402,8 @@
         border-bottom: 1px solid $gray500;
       }
     }
+
+    // reset password cta button
     .fotgotbtn {
       width: 50%;
       font-weight: 500;
