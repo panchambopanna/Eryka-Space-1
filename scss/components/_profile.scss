@@ -1,0 +1,40 @@
+@use "../globals";
+@use "../utilities" as *;
+
+// User button
+.header__userAvatar {
+  position: relative;
+  display: inline-block;
+
+  img {
+    height: 40px;
+    border-radius: 50%;
+  }
+  @include breakpoint-down(small) {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0.1rem;
+    background-color: $gray100;
+    min-width: 150px;
+    z-index: 1;
+
+    a {
+      color: $black;
+      padding: 0.5rem;
+      text-decoration: none;
+      display: block;
+    }
+  }
+}
+.dropdown-content a:hover {
+  background-color: $gray300;
+}
+
+.header__userAvatar:hover .dropdown-content {
+  display: block;
+}
